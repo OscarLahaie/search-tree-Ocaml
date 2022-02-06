@@ -21,5 +21,4 @@ build: [
         "@install"
         "@runtest" {with-test}
     ]
-    ["dune" "install" "-p" name "--create-install-files" name]
 ]
