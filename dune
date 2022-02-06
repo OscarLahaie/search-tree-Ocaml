@@ -1,2 +1,2 @@
-(executable
- (name search-tree))
+(library
+ (public_name search-tree))

@@ -94,7 +94,7 @@ let is_correct tree =
 let rec size tree =
   match tree with
   | Vide -> 0
-  | Noeud (cl, _, cr) -> 1 + size cl + size cl
+  | Noeud (cl, _, cr) -> 1 + size cl + size cr
 ;;
 
 (** Check if a tree have the searched key*)
@@ -136,15 +136,15 @@ let rec max_elt tree =
   match tree with
   | Vide -> failwith "arbre vide"
   | Noeud (_, e, Vide) -> e
-  | Noeud (_, _, cr) -> min_elt cr
+  | Noeud (_, _, cr) -> max_elt cr
 ;;
 
 (** Return the maximal element of the tree. The optionnal version of max_elt *)
-let rec min_elt_opt tree =
+let rec max_elt_opt tree =
   match tree with
   | Vide -> None
   | Noeud (_, e, Vide) -> Some e
-  | Noeud (_, _, cr) -> min_elt_opt cr
+  | Noeud (_, _, cr) -> max_elt_opt cr
 ;;
 
 
@@ -169,3 +169,19 @@ let rec delete key tree =
     | Noeud (cl, e, cr) ->
         Noeud (cl, e, delete key cr)
 ;;
+
+
+let tree_completed = Noeud(Noeud (Noeud (Vide,Int_elt 1,Vide), Int_elt 2, Noeud (Vide,Int_elt 3, Vide)), Int_elt 4, Noeud (Noeud (Vide, Int_elt 5,Vide), Int_elt 6, Noeud (Vide, Int_elt 7, Vide)));;
+print_endline (string_of_bool(is_correct tree_completed));;
+
+let tree = Noeud (Vide, Int_elt 5, Vide);;
+affichage_infixe tree;;
+print_endline "";;
+
+let tree2 = add (Int_elt 4) tree;;
+affichage_infixe tree2;;
+print_endline "";;
+
+let tree3 = add (Int_elt 6) tree2;;
+affichage_infixe tree3;;
+print_endline "";;
