@@ -11,11 +11,15 @@ homepage: "https://github.com/OscarLahaie/search-tree-Ocaml"
 bug-reports: "https://github.com/OscarLahaie/search-tree-Ocaml/issues"
 depends: [ "ocaml" "ocamlfind" ]
 build: [
-    "dune"
-    "build"
-    "-p"
-    name
-    "-j"
-    jobs
-    "@runtest"
-  ]
+    [
+        "dune"
+        "build"
+        "-p"
+        name
+        "-j"
+        jobs
+        "@install"
+        "@runtest" {with-test}
+    ]
+    ["dune" "install" "-p" name "--create-install-files" name]
+]
