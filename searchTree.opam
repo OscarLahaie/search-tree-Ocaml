@@ -1,6 +1,6 @@
 opam-version: "2.0"
 name: "searchTree"
-version: "0.3"
+version: "0.1"
 synopsis: "A module to easily implement search trees"
 description: """
 The module contains what is needed to use search trees and the functions necessary to use them. 
@@ -11,8 +11,6 @@ homepage: "https://github.com/OscarLahaie/search-tree-Ocaml"
 bug-reports: "https://github.com/OscarLahaie/search-tree-Ocaml/issues"
 depends: [ "ocaml" "ocamlfind" ]
 build: [
-<<<<<<< HEAD
-    [
         "dune"
         "build"
         "-p"
@@ -20,14 +18,5 @@ build: [
         "-j"
         jobs
         "@install"
-    ]
+        "@runtest"
 ]
-=======
-    "dune"
-    "build"
-    "-p"
-    name
-    "-j"
-    jobs
-  ]
->>>>>>> parent of dfacc17 (test)
