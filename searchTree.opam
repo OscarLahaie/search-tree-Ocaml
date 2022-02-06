@@ -19,6 +19,5 @@ build: [
         "-j"
         jobs
         "@install"
-        "@runtest" {with-test}
     ]
 ]
