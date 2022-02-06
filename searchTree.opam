@@ -1,6 +1,6 @@
 opam-version: "2.0"
 name: "searchTree"
-version: "0.1"
+version: "0.2"
 synopsis: "A module to easily implement search trees"
 description: """
 The module contains what is needed to use search trees and the functions necessary to use them. 
