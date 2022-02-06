@@ -11,6 +11,7 @@ homepage: "https://github.com/OscarLahaie/search-tree-Ocaml"
 bug-reports: "https://github.com/OscarLahaie/search-tree-Ocaml/issues"
 depends: [ "ocaml" "ocamlfind" ]
 build: [
+<<<<<<< HEAD
     [
         "dune"
         "build"
@@ -21,3 +22,12 @@ build: [
         "@install"
     ]
 ]
+=======
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+  ]
+>>>>>>> parent of dfacc17 (test)
