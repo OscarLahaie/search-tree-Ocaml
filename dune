@@ -1,2 +1,2 @@
 (library
- (public_name search-tree))
+ (public_name searchTree))
