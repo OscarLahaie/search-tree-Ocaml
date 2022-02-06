@@ -12,4 +12,4 @@ homepage: "https://github.com/OscarLahaie/search-tree-Ocaml"
 bug-reports: "https://github.com/OscarLahaie/search-tree-Ocaml/issues"
 dev-repo: ""
 depends: [ "ocaml" "ocamlfind" ]
-build: ["dune" "build" "-p" name "-j" jobs]
+build: ["dune" "build" "-p pkg" name "-j" jobs]

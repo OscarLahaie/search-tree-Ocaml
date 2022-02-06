@@ -1,2 +1,3 @@
 (library
+ (name searchTree)
  (public_name searchTree))
