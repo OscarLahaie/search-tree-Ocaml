@@ -7,16 +7,9 @@ The module contains what is needed to use search trees and the functions necessa
 """
 maintainer: "Oscar Lahaie <oscarlahaie83@gmail.com>"
 authors: "Oscar Lahaie <oscarlahaie83@gmail.com>"
+license: "GPL-3.0 License"
 homepage: "https://github.com/OscarLahaie/searchTree-Ocaml"
 bug-reports: "https://github.com/OscarLahaie/searchTree-Ocaml/issues"
+dev-repo: "git+https://github.com/OscarLahaie/searchTree-Ocaml.git"
 depends: [ "ocaml" "ocamlfind" ]
-build: [
-        "dune"
-        "build"
-        "-p"
-        name
-        "-j"
-        jobs
-        "@install"
-        "@runtest"
-]
+build: ["dune" "build" "-p" name "-j" jobs "@runtest"]
